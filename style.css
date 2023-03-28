@@ -1,0 +1,49 @@
+body {
+  background-image: url('logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  margin: 20px;
+  background-color: rgba(36, 216, 198, 1); /* Use rgba to set an alpha value for the background color */
+  color: #FFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  border-radius: 30px;
+  background-color: rgba(242, 87, 87, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 127, 80, 0.7);
+  color: #FFF;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 3px;
+}
